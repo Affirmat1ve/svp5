@@ -74,6 +74,10 @@ public class ResourcePool<T> {
         }
     }
 
+    public int getPoolSize(){
+        return this.size;
+    }
+
     public void shutdown() {
         shutdownCalled = true;
         executor.shutdownNow();

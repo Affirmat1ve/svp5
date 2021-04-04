@@ -12,8 +12,8 @@ public class FileFactory implements ObjectFactory<FileWriter> {
     @Override
     public FileWriter createNew() {
 
-        String path = System.getProperty("user.home") + File.separator + "Documents";
-        path += File.separator + "Log Folder";
+        String path = System.getProperty("user.dir") + File.separator + "Log";
+        //path += File.separator + "Log Folder";
         File customDir = new File(path);
 
         if (!customDir.exists()) {
@@ -33,7 +33,7 @@ public class FileFactory implements ObjectFactory<FileWriter> {
         return null;
     }
 
-    
+
     public static void main(String[] args) {
         long timeMillis = 1000000;
         int size = 4;

@@ -34,6 +34,7 @@ public class Solver implements Runnable {
 
     static String findRoots(double a, double b, double c) {
         if (a == 0) {
+            if (b==0) {if (c!=0){return("No roots");} else return("Any numbers");}
             double x1 = -c / b;
             return String.format("%f" + '\n', x1);
         }
